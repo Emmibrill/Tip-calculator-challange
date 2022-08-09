@@ -322,6 +322,12 @@ input:focus{
     color: var(--white-color);
     transition: 1s;
 }
+.button-one.active{
+    border:  1px solid transparent;
+    background-color: var(--strong-cyan);
+    color: var(--verydark-bg);
+    font-weight: bold;
+}
 .button-one:not(.class-custom):hover{
     border:  1px solid transparent;
     background-color: var(--strong-cyan);
