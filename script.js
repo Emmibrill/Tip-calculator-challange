@@ -74,6 +74,7 @@ resetButton.addEventListener('click', e => {
         Billelement.value = ''
         noofpeople.value = ''
         customInput.value = ''
+        ClearError()
     }
 })
 function clearError() {
