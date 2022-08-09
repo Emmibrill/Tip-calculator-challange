@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --strong-cyan: hsl(172, 67%, 45%);
+    --verydark-bg:hsl(183, 100%, 15%);
+    --dark-bg:hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish: hsl(185, 41%, 84%);
+    --verylight-grayish: hsl(189, 41%, 97%);
+    --white-color: hsl(0, 0%, 100%);
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Space Mono', monospace;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-grayish);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 6rem 0;
+
+}
+
+.main{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin-left: 12%;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1.4rem;
+    background-color: var(--white-color);
+}
+.calc-logo{
+    margin-top: 5rem;
+}
+.logo img{
+    height: 3.5rem;
+    padding:  .5rem 0;
+    margin: .5rem 0;
+}
+@media screen and (max-width: 875px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        padding: 2rem;
+    }
+    
+}
+@media screen and (max-width: 375px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 2rem;
+    }
+    
+}
+.calc-pane-left{
+    position: relative;
+    display:block;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    padding-right: 2rem;
+}
+@media screen and (max-width: 875px) {
+    .calc-pane-left{
+        width: 100%;
+        padding: 0;
+    }
+    
+}
+
+.billing{
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--verydark-bg);
+    opacity: .8;
+    margin-bottom: .4rem;
+}
+.input{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background-color: var(--verylight-grayish);
+    border: none;
+    padding: 1rem 0;
+   border-radius: 5px;
+}
+@media screen and (max-width: 875px) {
+    .input{
+        width: 100%;
+    }
+    
+}
+.input img{
+    position: absolute;
+    bottom: .8rem;
+    left: .8rem;
+}
+.input input{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    text-align: right;
+    padding-right: 1.5rem;
+    padding-left: 2rem;
+    border: 1px solid transparent;
+}
+input{
+    font-family: 'Space Mono', monospace;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verydark-bg);
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+input:hover{
+    border: 1px solid var(--strong-cyan);
+    border-radius: 5px;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearane: textfield;
+}
+
+input::placeholder{
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verydark-bg);
+    text-align: right;
+    top: 8px;
+
+}
+input:focus{
+    outline: 1px solid var(--strong-cyan);
+    border-radius: 5px;
+}
+.focusOn:focus{
+    outline: 1px solid red;
+}
+
+#number-input-error{
+    display: none;
+    text-align: right;
+    position: relative;
+    font-size: 1rem;
+    color: red;
+    right: 0;
+    bottom: 2.4rem;
+
+}
+.select-tip{
+    width: 100%;  
+}
+.select-tip h4{
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--verydark-bg);
+    opacity: .8;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 875px) {
+    .select-tip{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.select-button{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0rem;
+    gap: .5rem;
+}
+
+@media screen and (max-width: 875px) {
+    .select-button{
+        display: flex;
+        width: 100%;
+        margin: 0;
+    }
+    
+}
+@media screen and (max-width: 463px) {
+    .select-button{
+        gap: .4rem
+    }
+    
+}
+
+.button-one{
+    width: 32%;
+    height: 3rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1235px) {
+    .button-one{
+        width: 31.9%;
+    } 
+}
+@media screen and (max-width: 1161px) {
+    .button-one{
+        width: 31.8%;
+    }
+}
+@media screen and (max-width: 1096px) {
+    .button-one{
+        width: 31.5%;
+    }
+}
+@media screen and (max-width: 1032px) {
+    .button-one{
+        width: 31.3%;
+    }
+}
+@media screen and (max-width: 1029px) {
+    .button-one{
+        width: 31.4%;
+    }
+}
+@media screen and (max-width: 944px) {
+    .button-one{
+        width: 31.2%;
+    }
+}
+@media screen and (max-width: 875px) {
+    .button-one{
+        width: 32.4%;
+    }
+}
+@media screen and (max-width: 822px) {
+    .button-one{
+        width: 32.5%;
+    }
+}
+@media screen and (max-width: 736px) {
+    .button-one{
+        width: 32.4%;
+    }
+}
+@media screen and (max-width: 634px) {
+    .button-one{
+        width: 32.3%;
+    }
+}
+@media screen and (max-width: 580px) {
+    .button-one{
+        width: 32.2%;
+    }
+}
+@media screen and (max-width: 534px) {
+    .button-one{
+        width: 32.1%;
+    }
+}
+@media screen and (max-width: 496px) {
+    .button-one{
+        width: 32%;
+    }
+}
+@media screen and (max-width: 463px) {
+    .button-one{
+        width: 49%;
+    }
+}
+@media screen and (max-width: 384px) {
+    .button-one{
+        width: 48%;
+    }
+}
+@media screen and (max-width: 375px) {
+    .button-one{
+        width: 48%;
+    }   
+}
+.button-one:not(.class-custom){
+    border:  1px solid var(--verydark-bg);
+    background-color: var(--verydark-bg);
+    color: var(--white-color);
+    transition: 1s;
+}
+.button-one:not(.class-custom):hover{
+    border:  1px solid transparent;
+    background-color: var(--strong-cyan);
+    color: var(--verydark-bg);
+    font-weight: bold;
+}
+.class-custom{
+    position: relative;
+    color: var(--white-color);
+    background-color: var(--verylight-grayish);
+    border: 1px solid transparent;
+}
+.class-custom .custom{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    padding: 0 1rem;
+    border: none;
+    background: transparent;
+    border: 2px solid transparent;
+    transition: .5s;
+}
+.class-custom .custom:hover{
+    color: var(--verydark-bg);
+    background-color: var(--verylight-grayish);
+    border: 2px solid var(--strong-cyan);
+}
+.class-custom .custom::placeholder{
+    text-align: center;
+    color: hsl(186, 14%, 43%);
+    font-weight: bold;
+}
+.bill label{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: var(--verydark-bg);
+    opacity: .8;
+}
+.calc-right-pane{
+    display: block;
+    color: var(--white-color);
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    background-color: var(--verydark-bg);
+    border-radius: 1.4rem;
+}
+@media screen and (max-width: 875px) {
+    .calc-right-pane{
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+.details{
+    margin: 2.1rem 2rem;
+    display: block
+}
+.tip-details{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0;
+}
+.first-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.first{
+    margin-top: .8rem;
+}
+@media screen and (max-width: 726px) {
+    .first{
+        margin-top: .3rem;
+    }
+}
+.first .tip-amount h3{
+    color: var(--white-color);
+    font-size: 1rem;
+}
+@media screen and (max-width: 816px) {
+    .first .tip-amount h3{
+        font-size: 1rem;
+}
+}
+.first .person {
+    color: var(--white-color);
+    margin: .5rem 0;
+    opacity: .6;
+}
+.first .person h4 i{
+    font-size: .8rem;
+    color: var(--white-color);
+}
+span{
+   color: var(--strong-cyan);
+    font-size: 3rem;
+    font-weight: bold;
+}
+@media screen and (max-width: 450px) {
+    span{
+        font-size: 2.3rem;
+    }
+}
+.dollar{
+    position: relative;
+    display: inline-flex;
+    color: var(--strong-cyan);
+    font-size: 2rem;
+    font-weight: 700;
+    background: ;
+    top: -.3rem;
+}
+@media screen and (max-width:450px) {
+    .dollar{
+        font-size: 1.5rem;
+    }
+}
+.second-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.second{
+    margin-top: .8rem;
+}
+@media screen and (max-width: 726px) {
+    .second{
+        margin-top: .3rem;
+    } 
+}
+.second .total h3{
+    color: var(--white-color);
+    font-size: 1rem;
+}
+.second .person {
+    color: var(--white-color);
+    margin: .5rem 0;
+    opacity: .6;
+}
+.second .person h4 i{
+    font-size: .8rem;
+    color: var(--white-color);
+}
+@media  screen and (max-width:875px) {
+    .tip-details{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0;
+    } 
+}
+.btn{
+    margin-top: 7rem;
+    background-color:  hsl(183, 100%, 20%);
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    color: hsla(183, 100%, 15%, .5);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    padding: .7rem 0;
+    transition: 1s;
+}
+.btn:hover{
+    background-color: var(--strong-cyan);
+    color: var(--verydark-bg);
+    border: 5px;
+}
+@media screen and (max-width: 875px) {
+    .btn{
+      margin-top: 1rem;  
+    }
+}
+.coded-by{
+    font-size:1.2rem;
+    margin-top: 2rem;
+}
+@media screen and (max-width:461px) {
+    .coded-by{
+        margin-top: .1rem;
+        font-size: 1rem;
+        padding: 1rem;
+    } 
+}
+.coded-by p{
+    color: var(--verydark-bg);
+    font-weight: bold;
+}
+.frontend{
+    font-size: 1rem;
+    font-style: italic;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: red;
+}
+.name{
+    font-size: 1rem;
+    font-style: italic;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: blue;
+}
+.emmibrill{
+    font-size: 1rem;
+    font-style: italic;
+    color: blue;
+}

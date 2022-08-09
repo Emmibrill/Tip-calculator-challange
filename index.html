@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmibrill's Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!---calc main starts-->
+    <div class="calc-main">
+        <div class="calc-container">
+             <!---logo section starts-->
+             <div class="calc-logo">
+                <div class="logo">
+                    <img src="logo.svg" alt="logo">
+                </div>
+            </div>
+            <!---logo section ends-->
+            <div class="main">
+                <!---cacl left pane starts-->
+                <div class="calc-pane-left">
+                    <div class="bil">
+                        <label for="Bill" class="billing">Bill</label>
+                        <div class="input">
+                            <img src="icon-dollar.svg" alt="dollar-sign">
+                            <input id="bill_amount" type="number"  placeholder="0" >
+                        </div>
+                    </div>
+                    <div class="select">
+                        <div class="select-tip">
+                            <h4>select tip %</h4>
+                            <div class="select-button">
+                                <div class="class-15 button-one">5%</div>
+                                <div class="class-10 button-one">10%</div>
+                                <div class="class-15 button-one">15%</div>
+                                <div class="class-25 button-one">25%</div>
+                                <div class="class-50 button-one">50%</div>
+                                <div class="class-custom button-one">
+                                    <input type="number" class="custom" id="custom" placeholder="Custom">
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bill">
+                        <label id="people" for="people">Number of People</label>
+                        <div class="input">
+                            <img src="icon-person.svg" alt="icon-person">
+                            <input onkeyup="showclass()" id="no-of-ppl" type="number"  min="1" placeholder="0">
+                            <h3 id="number-input-error" >can't be zero</h3>
+                        </div>
+                    </div>
+                </div>
+                 <!---cacl left pane ends-->
+
+                  <!---calc right pane starts-->
+                <div class="calc-right-pane">
+                    <!---calc right pane details starts-->
+                    <div class="details">
+                        <!---calc right pane tip-details starts-->
+                        <div class="tip-details">
+                            <!---calc right pane tip-details fot Tip-Amount starts-->
+                            <div class="first-main">
+                                <div class="first">
+                                    <div class="tip-amount">
+                                        <h3>Tip Amount</h3>
+                                    </div>
+                                    <div class="person">
+                                        <h4><i>/ person</i></h4>
+                                    </div>
+                                </div>
+                                <div class="tip-ouput">
+                                    <div class="dollar">$</div><span id="tip-amount-per-person">0.00</span>
+                                </div>
+                            </div>
+                            <!---calc right pane tip-details for Tip-Amount ends-->
+
+                            <!---calc right pane tip-details fot Total starts-->
+                            <div class="second-main">
+                                <div class="second">
+                                    <div class="total">
+                                        <h3>Total</h3>
+                                    </div>
+                                    <div class="person">
+                                        <h4><i>/ person</i></h4>
+                                    </div>
+                                </div>
+                                <div class="tip-ouput">
+                                    <div class="dollar">$</div><span id="total-amount-per-person">0.00</span>
+                                </div>
+                            </div>
+                            <!---calc right pane tip-details fot Total ends-->
+                            
+                        </div>
+                        <div class="button">
+                            <button type="reset" class="btn">Reset</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                 <!---calc left pane ends-->
+            </div>
+           
+        </div>
+    </div>
+    <!---calc main ends-->
+    <div class="coded-by">
+        <p class="code">challenge by <span class="frontend">frontend mentor.</span> 
+            Coded by <span class="name">Emmanuel Okokon Udo.</span> AKA 
+            <span class="emmibrill">EMMIBRILL_UDO</span></p>
+    </div>
+  <script src="script.js"></script>  
+</body>
+</html>
